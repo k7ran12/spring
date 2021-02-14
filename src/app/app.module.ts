@@ -9,6 +9,7 @@ import { EditComponent } from './Persona/edit/edit.component';
 import {FormsModule}from '@angular/forms';
 import{ ServiceService }from  '../app/Service/service.service';
 import{HttpClientModule}from  '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -17,7 +18,8 @@ import{HttpClientModule}from  '@angular/common/http';
     AppComponent,
     ListarComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
