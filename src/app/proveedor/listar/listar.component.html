@@ -6,7 +6,7 @@
     </div>
 
     <div class="card-header">
-<h3 style="text-align: center;">Lista de Cliente</h3>
+<h3 style="text-align: center;">Lista de Proveedores</h3>
     </div>
 
     <div class="card-body">
@@ -14,19 +14,23 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>NOMBRE</th>
-            <th>APELLIDOS</th>
-            <th>ACCIONES</th>
+            <th>CIUDAD</th>
+            <th>DIRECCION</th>
+            <th>NOMBRE CONTACTO</th>
+            <th>NOMBRE EMPRESA</th>
+            <th>TELEFONO</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let empleado of empleados">
-            <td>{{empleado.id}}</td>
-            <td>{{empleado.nombre}}</td>
-            <td>{{empleado.apellido}}</td>
+        <tr *ngFor="let proveedor of proveedores">
+            <td>{{proveedor.id}}</td>
+            <td>{{proveedor.nombre}}</td>
+            <td>{{proveedor.apellido}}</td>
+            <td>{{proveedor.nombre}}</td>
+            <td>{{proveedor.apellido}}</td>
             <td>
-                <button (click)="Editar(empleado)"  style="margin: 0     10px;" class="btn btn-warning">editar</button>
-                <button (click)="Delete(empleado)" class="btn btn-danger">eliminar</button>
+                <button (click)="Editar(proveedor)"  style="margin: 0     10px;" class="btn btn-warning">editar</button>
+                <button (click)="Delete(proveedor)" class="btn btn-danger">eliminar</button>
             </td>
         </tr>
     </tbody>

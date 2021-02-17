@@ -34,8 +34,16 @@ Delete(empleado:Empleado) {
   .subscribe(data=>{
   
     this.empleados=this.empleados.filter(p=>p!==empleado);
-    alert("Cliente eliminado");
+    alert("Empleado eliminado");
   })
+  }
+
+  Listar(){
+    this.router.navigate(["empleado/listar"]);
+  }
+  Nuevo(){
+
+    this.router.navigate(["empleado/add"]);
   }
 
 

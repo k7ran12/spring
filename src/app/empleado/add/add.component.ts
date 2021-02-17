@@ -22,7 +22,7 @@ export class AddComponent implements OnInit {
     .subscribe(data=>{
       
       alert("Se Agrego con Exito...!!!");
-      this.router.navigate(["listar"]);
+      this.router.navigate(["empleado/listar"]);
     })
   }
 

@@ -10,6 +10,9 @@ import {FormsModule}from '@angular/forms';
 import{ ServiceService }from  './service/service.service';
 import{HttpClientModule}from  '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
+import { ProveedorEditComponent } from './proveedor/edit/edit.component';
+import { ProveedorListarComponent } from './proveedor/listar/listar.component';
+import { ProveedorAddComponent } from './proveedor/add/add.component';
 
 
 
@@ -19,7 +22,10 @@ import { HeaderComponent } from './header/header.component';
     ListarComponent,
     AddComponent,
     EditComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProveedorEditComponent,
+    ProveedorListarComponent,
+    ProveedorAddComponent  
   ],
   imports: [
     BrowserModule,
