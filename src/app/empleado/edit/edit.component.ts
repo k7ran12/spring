@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { getLocaleFirstDayOfWeek } from '@angular/common';
 import { Router } from '@angular/router';
-import { ServiceService } from 'src/app/Service/service.service';
-import { Persona } from 'src/app/Modelo/Persona';
+import { ServiceService } from 'src/app/service/service.service';
+import { Empleado } from 'src/app/modelo/empleado';
 
 @Component({
   selector: 'app-edit',
@@ -10,7 +10,7 @@ import { Persona } from 'src/app/Modelo/Persona';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-  persona :Persona=new Persona();
+  empleado :Empleado=new Empleado();
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit(): void {
@@ -21,14 +21,14 @@ export class EditComponent implements OnInit {
     let id=localStorage.getItem("id");
     this.service.getPersonaId(+id)
     .subscribe(data=>{
-      this.persona=data;
+      this.empleado=data;
     })
 
   }
-  Actualizar(persona:Persona){
-    this.service.updatePersona(persona)
+  Actualizar(empleado:Empleado){
+    this.service.updatePersona(empleado)
     .subscribe(data=>{
-      this.persona=data;
+      this.empleado=data;
       alert("Se Actualizo con Exito...!!!");
       this.router.navigate(["listar"]);
     })

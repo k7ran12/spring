@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServiceService}from '../../Service/service.service'
-import { Persona } from 'src/app/Modelo/Persona';
+import { ServiceService}from '../../service/service.service'
+import { Empleado } from 'src/app/modelo/empleado';
 
 @Component({
   selector: 'app-add',
@@ -9,7 +9,7 @@ import { Persona } from 'src/app/Modelo/Persona';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-  persona:Persona=new Persona();
+  empleado:Empleado=new Empleado();
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit() :void {
@@ -17,8 +17,8 @@ export class AddComponent implements OnInit {
   }
 
   Guardar(){
-    console.log(this.persona);
-    this.service.createPersona(this.persona)
+    console.log(this.empleado);
+    this.service.createPersona(this.empleado)
     .subscribe(data=>{
       
       alert("Se Agrego con Exito...!!!");

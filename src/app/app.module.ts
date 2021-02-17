@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListarComponent } from './Persona/listar/listar.component';
-import { AddComponent } from './Persona/add/add.component';
-import { EditComponent } from './Persona/edit/edit.component';
+import { ListarComponent } from './empleado/listar/listar.component';
+import { AddComponent } from './empleado/add/add.component';
+import { EditComponent } from './empleado/edit/edit.component';
 import {FormsModule}from '@angular/forms';
-import{ ServiceService }from  '../app/Service/service.service';
+import{ ServiceService }from  './service/service.service';
 import{HttpClientModule}from  '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 

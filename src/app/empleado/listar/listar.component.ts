@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServiceService}from '../../Service/service.service'
-import { Persona } from 'src/app/Modelo/Persona';
+import { ServiceService}from '../../service/service.service'
+import { Empleado } from 'src/app/modelo/empleado';
 
 @Component({
   selector: 'app-listar',
@@ -9,31 +9,31 @@ import { Persona } from 'src/app/Modelo/Persona';
   styleUrls: ['./listar.component.css']
 })
 export class ListarComponent implements OnInit {
-personas:Persona[];
+empleados:Empleado[];
   constructor(private service:ServiceService,private router:Router) { }
 
   ngOnInit(): void {
 this.service.getPersonas().subscribe(data=>{
-this.personas=data;
+this.empleados=data;
   
 });
 
 
   }
 
-  Editar(persona:Persona){
-localStorage.setItem("id",persona.id.toString());
+  Editar(empleado:Empleado){
+localStorage.setItem("id",empleado.id.toString());
 this.router.navigate(["edit"]);
 
   }
 
 
-Delete(persona:Persona) {
+Delete(empleado:Empleado) {
 
-  this.service.deletePersona(persona)
+  this.service.deletePersona(empleado)
   .subscribe(data=>{
   
-    this.personas=this.personas.filter(p=>p!==persona);
+    this.empleados=this.empleados.filter(p=>p!==empleado);
     alert("Cliente eliminado");
   })
   }

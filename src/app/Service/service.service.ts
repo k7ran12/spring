@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'; 
-import { Persona } from '../Modelo/Persona';
+import { Empleado } from '../modelo/empleado';
 
 @Injectable({
   providedIn: 'root'
@@ -10,18 +10,18 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
   Url='http://localhost:8080/api/clientes';
   getPersonas(){
-    return this.http.get<Persona[]>(this.Url);
+    return this.http.get<Empleado[]>(this.Url);
   }
-  createPersona(persona:Persona){
-    return this.http.post<Persona>(this.Url,persona);
+  createPersona(empleado:Empleado){
+    return this.http.post<Empleado>(this.Url,empleado);
   }
   getPersonaId(id:number){
-    return this.http.get<Persona>(this.Url+"/"+id);
+    return this.http.get<Empleado>(this.Url+"/"+id);
   }
-  updatePersona(persona:Persona){
-    return this.http.put<Persona>(this.Url+"/"+persona.id,persona);
+  updatePersona(empleado:Empleado){
+    return this.http.put<Empleado>(this.Url+"/"+empleado.id,empleado);
   }
-  deletePersona(persona:Persona){
-    return this.http.delete<Persona>(this.Url+"/"+persona.id);
+  deletePersona(empleado:Empleado){
+    return this.http.delete<Empleado>(this.Url+"/"+empleado.id);
   }
 }
