@@ -30,7 +30,7 @@ export class ProveedorEditComponent implements OnInit {
     .subscribe(data=>{
       this.proveedor=data;
       alert("Se Actualizo con Exito...!!!");
-      this.router.navigate(["listar"]);
+      this.router.navigate(["proveedor/listar"]);
     })
   }
 }

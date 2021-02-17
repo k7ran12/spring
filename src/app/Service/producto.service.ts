@@ -8,7 +8,7 @@ import { Producto } from '../modelo/producto';
 export class ProductoService {
 
   constructor(private http:HttpClient) { }
-  Url='http://localhost:8080/api/producto';
+  Url='http://localhost:8080/productos';
   getProducto(){
     return this.http.get<Producto[]>(this.Url);
   }

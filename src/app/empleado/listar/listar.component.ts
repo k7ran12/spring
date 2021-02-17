@@ -23,7 +23,7 @@ this.empleados=data;
 
   Editar(empleado:Empleado){
 localStorage.setItem("id",empleado.id.toString());
-this.router.navigate(["edit"]);
+this.router.navigate(["empleado/edit"]);
 
   }
 

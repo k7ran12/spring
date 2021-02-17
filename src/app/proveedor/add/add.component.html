@@ -6,16 +6,20 @@
         <div class="card-body">
           <form action="">
             <div class="form-group">
+              <label for="">Nombre Empresa:</label>
+              <input [(ngModel)]="proveedor.nombreEmpresa" name="nombreEmpresa" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">Nombre Contacto:</label>
+              <input [(ngModel)]="proveedor.nombreContacto" name="nombreContacto" type="text" class="form-control">
+            </div>
+            <div class="form-group">
               <label for="">Direccion:</label>
               <input [(ngModel)]="proveedor.direccion" name="direccion" type="text" class="form-control">
             </div>
             <div class="form-group">
-              <label for="">Nombre Contacto:</label>
-              <input [(ngModel)]="proveedor.nombre_contacto" name="nombre_contacto" type="text" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="">Nombre Empresa:</label>
-              <input [(ngModel)]="proveedor.nombre_empresa" name="c" type="text" class="form-control">
+              <label for="">Ciudad:</label>
+              <input [(ngModel)]="proveedor.ciudad" name="ciudad" type="text" class="form-control">
             </div>
             <div class="form-group">
               <label for="">Telefono:</label>

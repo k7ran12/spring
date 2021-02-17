@@ -1,7 +1,8 @@
 export class Proveedor {
     id : number;
+    nombreEmpresa : String;
+    nombreContacto : String;
     direccion : String;
-    nombre_contacto : String;
-    nombre_empresa : String;
+    ciudad : String;
     telefono : String;
 }

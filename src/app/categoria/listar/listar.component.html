@@ -15,13 +15,14 @@
           <tr>
               <th>ID</th>
               <th>NOMBRE</th>
-              <th>Descripcion</th>              
+              <th>Descripcion</th>
+              <th>Acciones</th>             
           </tr>
       </thead>
       <tbody>
           <tr *ngFor="let categoria of categorias">
               <td>{{categoria.id}}</td>
-              <td>{{categoria.nombre}}</td>      
+              <td>{{categoria.nombreCategoria}}</td>      
               <td>{{categoria.descripcion}}</td>          
               <td>
                   <button (click)="Editar(categoria)"  style="margin: 0     10px;" class="btn btn-warning">editar</button>

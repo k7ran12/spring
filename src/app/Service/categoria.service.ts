@@ -9,7 +9,7 @@ import { Categoria } from '../modelo/categoria';
 export class CategoriaService {
 
   constructor(private http:HttpClient) { }
-  Url='http://localhost:8080/api/categoria';
+  Url='http://localhost:8080/categorias';
   getCategoria(){
     return this.http.get<Categoria[]>(this.Url);
   }

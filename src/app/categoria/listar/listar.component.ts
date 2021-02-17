@@ -11,6 +11,7 @@ import { CategoriaService } from 'src/app/service/categoria.service';
 export class CategoriaListarComponent implements OnInit {
 
   categorias:Categoria[];
+  
   constructor(private service:CategoriaService,private router:Router) { }
 
   ngOnInit(): void {
@@ -24,7 +25,7 @@ this.categorias=data;
 
   Editar(categoria:Categoria){
 localStorage.setItem("id",categoria.id.toString());
-this.router.navigate(["edit"]);
+this.router.navigate(["categoria/edit"]);
 
   }
 

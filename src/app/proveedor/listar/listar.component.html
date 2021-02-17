@@ -14,20 +14,21 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>CIUDAD</th>
-            <th>DIRECCION</th>
-            <th>NOMBRE CONTACTO</th>
             <th>NOMBRE EMPRESA</th>
+            <th>NOMBRE CONTACTO</th>
+            <th>DIRECCION</th>
+            <th>CIUDAD</th>
             <th>TELEFONO</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let proveedor of proveedores">
             <td>{{proveedor.id}}</td>
-            <td>{{proveedor.nombre}}</td>
-            <td>{{proveedor.apellido}}</td>
-            <td>{{proveedor.nombre}}</td>
-            <td>{{proveedor.apellido}}</td>
+            <td>{{proveedor.nombreEmpresa}}</td>
+            <td>{{proveedor.nombreContacto}}</td>
+            <td>{{proveedor.direccion}}</td>
+            <td>{{proveedor.ciudad}}</td>
+            <td>{{proveedor.telefono}}</td>
             <td>
                 <button (click)="Editar(proveedor)"  style="margin: 0     10px;" class="btn btn-warning">editar</button>
                 <button (click)="Delete(proveedor)" class="btn btn-danger">eliminar</button>

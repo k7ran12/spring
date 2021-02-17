@@ -8,7 +8,7 @@ import { Empleado } from '../modelo/empleado';
 export class ServiceService {
   
   constructor(private http:HttpClient) { }
-  Url='http://localhost:8080/api/clientes';
+  Url='http://localhost:8080/empleados';
   getPersonas(){
     return this.http.get<Empleado[]>(this.Url);
   }

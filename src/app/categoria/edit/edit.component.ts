@@ -30,7 +30,7 @@ export class CategoriaEditComponent implements OnInit {
     .subscribe(data=>{
       this.categoria=data;
       alert("Se Actualizo con Exito...!!!");
-      this.router.navigate(["listar"]);
+      this.router.navigate(["categoria/listar"]);
     })
   }
 

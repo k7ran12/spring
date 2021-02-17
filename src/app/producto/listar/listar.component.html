@@ -17,13 +17,19 @@
               <th>NOMBRE PRODUCTO</th>
               <th>PRECIO UNITARIO</th>
               <th>UNIDAD EN STOCK</th>
+              <th>NOMBRE CATEGORIA</th>
+              <th>NOMBRE EMPRESA</th>
+              <th>ACCIONES</th>           
           </tr>
       </thead>
       <tbody>
           <tr *ngFor="let producto of productos">
               <td>{{producto.id}}</td>
-              <td>{{producto.nombre}}</td>
-              <td>{{producto.apellido}}</td>
+              <td>{{producto.nombreProducto}}</td>
+              <td>{{producto.precioUnitario}}</td>
+              <td>{{producto.unidadesEnStock}}</td>
+              <td>{{producto.categoria.nombreCategoria}}</td>
+              <td>{{producto.proveedor.nombreEmpresa}}</td>
               <td>
                   <button (click)="Editar(producto)"  style="margin: 0     10px;" class="btn btn-warning">editar</button>
                   <button (click)="Delete(producto)" class="btn btn-danger">eliminar</button>

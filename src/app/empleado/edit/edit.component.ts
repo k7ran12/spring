@@ -30,7 +30,7 @@ export class EditComponent implements OnInit {
     .subscribe(data=>{
       this.empleado=data;
       alert("Se Actualizo con Exito...!!!");
-      this.router.navigate(["listar"]);
+      this.router.navigate(["empleado/listar"]);
     })
   }
 

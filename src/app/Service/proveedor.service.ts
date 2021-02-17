@@ -9,7 +9,7 @@ import { Proveedor } from '../modelo/proveedor';
 export class ProveedorService {
 
   constructor(private http:HttpClient) { }
-  Url='http://localhost:8080/api/proveedor';
+  Url='http://localhost:8080/proveedores';
   getPersonas(){
     return this.http.get<Proveedor[]>(this.Url);
   }

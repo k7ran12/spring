@@ -24,7 +24,7 @@ this.proveedores=data;
 
   Editar(proveedor:Proveedor){
 localStorage.setItem("id",proveedor.id.toString());
-this.router.navigate(["edit"]);
+this.router.navigate(["proveedor/edit"]);
 
   }
 
