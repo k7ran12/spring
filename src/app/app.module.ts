@@ -13,6 +13,12 @@ import { HeaderComponent } from './header/header.component';
 import { ProveedorEditComponent } from './proveedor/edit/edit.component';
 import { ProveedorListarComponent } from './proveedor/listar/listar.component';
 import { ProveedorAddComponent } from './proveedor/add/add.component';
+import { CategoriaAddComponent } from './categoria/add/add.component';
+import { CategoriaListarComponent } from './categoria/listar/listar.component';
+import { CategoriaEditComponent } from './categoria/edit/edit.component';
+import { ProductoAddComponent } from './producto/add/add.component';
+import { ProductoEditComponent } from './producto/edit/edit.component';
+import { ProductoListarComponent } from './producto/listar/listar.component';
 
 
 
@@ -25,7 +31,14 @@ import { ProveedorAddComponent } from './proveedor/add/add.component';
     HeaderComponent,
     ProveedorEditComponent,
     ProveedorListarComponent,
-    ProveedorAddComponent  
+    ProveedorAddComponent,
+    CategoriaAddComponent,
+    CategoriaListarComponent,
+    CategoriaEditComponent,
+    ProductoAddComponent,
+    ProductoEditComponent,
+    ProductoListarComponent
+    
   ],
   imports: [
     BrowserModule,
